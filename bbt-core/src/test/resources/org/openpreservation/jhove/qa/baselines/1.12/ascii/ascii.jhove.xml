@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jhove xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://hul.harvard.edu/ois/xml/ns/jhove" xsi:schemaLocation="http://hul.harvard.edu/ois/xml/ns/jhove http://hul.harvard.edu/ois/xml/xsd/jhove/1.6/jhove.xsd" name="Jhove" release="1.12.0-SNAPSHOT" date="2016-04-29">
+ <date>2016-05-02T17:46:41+01:00</date>
+ <repInfo uri="/home/cfw/git/openpreserve/jhove/jhove-qa/src/main/resources/examples/ascii/README">
+  <reportingModule release="1.3" date="2006-09-05">ASCII-hul</reportingModule>
+  <lastModified>2015-10-16T11:14:16+01:00</lastModified>
+  <size>455</size>
+  <format>ASCII</format>
+  <status>Well-Formed and valid</status>
+  <mimeType>text/plain; charset=US-ASCII</mimeType>
+  <properties>
+   <property>
+    <name>ASCIIMetadata</name>
+    <values arity="List" type="Property">
+    <property>
+     <name>LineEndings</name>
+     <values arity="List" type="String">
+      <value>LF</value>
+     </values>
+    </property>
+    </values>
+   </property>
+  </properties>
+  <checksums>
+   <checksum type="CRC32">4cd9701f</checksum>
+   <checksum type="MD5">10fda64ea9ac6f700f0f9ec791300f87</checksum>
+   <checksum type="SHA-1">a7371acf8c01c66e76b05755be994c9a1bdb0e45</checksum>
+  </checksums>
+ </repInfo>
+ <repInfo uri="/home/cfw/git/openpreserve/jhove/jhove-qa/src/main/resources/examples/ascii/control.txt">
+  <reportingModule release="1.3" date="2006-09-05">ASCII-hul</reportingModule>
+  <lastModified>2015-10-16T11:14:16+01:00</lastModified>
+  <size>51</size>
+  <format>ASCII</format>
+  <status>Well-Formed and valid</status>
+  <mimeType>text/plain; charset=US-ASCII</mimeType>
+  <properties>
+   <property>
+    <name>ASCIIMetadata</name>
+    <values arity="List" type="Property">
+    <property>
+     <name>LineEndings</name>
+     <values arity="List" type="String">
+      <value>LF</value>
+     </values>
+    </property>
+    <property>
+     <name>ControlCharacters</name>
+     <values arity="List" type="String">
+      <value>TAB (0x09)</value>
+      <value>VT (0x0B)</value>
+      <value>FF (0x0C)</value>
+      <value>SUB (0x1A)</value>
+     </values>
+    </property>
+    </values>
+   </property>
+  </properties>
+  <checksums>
+   <checksum type="CRC32">bae406b6</checksum>
+   <checksum type="MD5">2774395cac046bf2fd1898ebed8a5f9a</checksum>
+   <checksum type="SHA-1">6753be3059ba36fd970ff620a7ebe3fff95c13fe</checksum>
+  </checksums>
+ </repInfo>
+ <repInfo uri="/home/cfw/git/openpreserve/jhove/jhove-qa/src/main/resources/examples/ascii/cr-lf-and-crlf.txt">
+  <reportingModule release="1.3" date="2006-09-05">ASCII-hul</reportingModule>
+  <lastModified>2015-10-16T11:14:16+01:00</lastModified>
+  <size>46</size>
+  <format>ASCII</format>
+  <status>Well-Formed and valid</status>
+  <mimeType>text/plain; charset=US-ASCII</mimeType>
+  <properties>
+   <property>
+    <name>ASCIIMetadata</name>
+    <values arity="List" type="Property">
+    <property>
+     <name>LineEndings</name>
+     <values arity="List" type="String">
+      <value>CR</value>
+      <value>LF</value>
+      <value>CRLF</value>
+     </values>
+    </property>
+    </values>
+   </property>
+  </properties>
+  <checksums>
+   <checksum type="CRC32">53ba8b63</checksum>
+   <checksum type="MD5">d96536015c793426a1136a8f20c7332a</checksum>
+   <checksum type="SHA-1">f3d53062ee464a5e97f207ca8cbfdd9a64f359f3</checksum>
+  </checksums>
+ </repInfo>
+ <repInfo uri="/home/cfw/git/openpreserve/jhove/jhove-qa/src/main/resources/examples/ascii/cr-only.txt">
+  <reportingModule release="1.3" date="2006-09-05">ASCII-hul</reportingModule>
+  <lastModified>2015-10-16T11:14:16+01:00</lastModified>
+  <size>45</size>
+  <format>ASCII</format>
+  <status>Well-Formed and valid</status>
+  <mimeType>text/plain; charset=US-ASCII</mimeType>
+  <properties>
+   <property>
+    <name>ASCIIMetadata</name>
+    <values arity="List" type="Property">
+    <property>
+     <name>LineEndings</name>
+     <values arity="List" type="String">
+      <value>CR</value>
+     </values>
+    </property>
+    </values>
+   </property>
+  </properties>
+  <checksums>
+   <checksum type="CRC32">2f49365d</checksum>
+   <checksum type="MD5">7846aa6bfc15801d044b45f490efab97</checksum>
+   <checksum type="SHA-1">a95109d5dabec0169fdff7e59928fa28626643ec</checksum>
+  </checksums>
+ </repInfo>
+ <repInfo uri="/home/cfw/git/openpreserve/jhove/jhove-qa/src/main/resources/examples/ascii/crlf-only.txt">
+  <reportingModule release="1.3" date="2006-09-05">ASCII-hul</reportingModule>
+  <lastModified>2015-10-16T11:14:16+01:00</lastModified>
+  <size>48</size>
+  <format>ASCII</format>
+  <status>Well-Formed and valid</status>
+  <mimeType>text/plain; charset=US-ASCII</mimeType>
+  <properties>
+   <property>
+    <name>ASCIIMetadata</name>
+    <values arity="List" type="Property">
+    <property>
+     <name>LineEndings</name>
+     <values arity="List" type="String">
+      <value>CRLF</value>
+     </values>
+    </property>
+    </values>
+   </property>
+  </properties>
+  <checksums>
+   <checksum type="CRC32">3683a530</checksum>
+   <checksum type="MD5">23d31e3864f56c397d690332fdeb84f9</checksum>
+   <checksum type="SHA-1">80de033d6ceafcc89f87a9553a3c38fc507844e6</checksum>
+  </checksums>
+ </repInfo>
+ <repInfo uri="/home/cfw/git/openpreserve/jhove/jhove-qa/src/main/resources/examples/ascii/lf-only.txt">
+  <reportingModule release="1.3" date="2006-09-05">ASCII-hul</reportingModule>
+  <lastModified>2015-10-16T11:14:16+01:00</lastModified>
+  <size>45</size>
+  <format>ASCII</format>
+  <status>Well-Formed and valid</status>
+  <mimeType>text/plain; charset=US-ASCII</mimeType>
+  <properties>
+   <property>
+    <name>ASCIIMetadata</name>
+    <values arity="List" type="Property">
+    <property>
+     <name>LineEndings</name>
+     <values arity="List" type="String">
+      <value>LF</value>
+     </values>
+    </property>
+    </values>
+   </property>
+  </properties>
+  <checksums>
+   <checksum type="CRC32">40d5cd5b</checksum>
+   <checksum type="MD5">1a49151cc5a9c023b049274985c158c1</checksum>
+   <checksum type="SHA-1">0bb0f58ce93c95c063d514b6be9433102af6969d</checksum>
+  </checksums>
+ </repInfo>
+</jhove>

@@ -1,0 +1,209 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <artifactId>oss-parent</artifactId>
+    <groupId>org.sonatype.oss</groupId>
+    <version>7</version>
+  </parent>
+
+  <groupId>org.openpreservation.bbt</groupId>
+  <artifactId>black-box-testing</artifactId>
+  <version>0.1.0-SNAPSHOT</version>
+  <packaging>pom</packaging>
+
+  <name>OPF Black Box Testing</name>
+  <description>A collection of testing and quality assurance tools for OPF projects.</description>
+
+  <url>https://github.com/opf-labs/black-box-testing/</url>
+  <inceptionYear>2016</inceptionYear>
+  <organization>
+    <name>The Open Preservation Foundation</name>
+    <url>http://www.openpreserve.org/</url>
+  </organization>
+  <licenses>
+    <license>
+      <name>GNU General Public License, version 3 (GPL-3)</name>
+      <url>http://www.gnu.org/licenses/gpl-3</url>
+      <distribution>repo</distribution>
+    </license>
+  </licenses>
+
+  <developers>
+    <developer>
+      <email>carl@openpreservation.org</email>
+      <name>Carl Wilson</name>
+      <url>https://github.com/carlwilson</url>
+      <organization>Open Preservation Foundation</organization>
+      <organizationUrl>http://openpreservation.org</organizationUrl>
+      <id>carlwilson</id>
+    </developer>
+  </developers>
+
+  <modules>
+    <module>bbt-core</module>
+    <module>bbt-jhove</module>
+  </modules>
+
+  <scm>
+    <url>https://github.com/opf-labs/black-box-testing/</url>
+    <connection>scm:git:https://github.com/opf-labs/black-box-testing.git</connection>
+    <developerConnection>scm:git:git@github.com:opf-labs/black-box-testing.git</developerConnection>
+  </scm>
+  <issueManagement>
+    <url>https://github.com/opf-labs/black-box-testing/issues/</url>
+    <system>GitHub Issues</system>
+  </issueManagement>
+  <ciManagement>
+    <system>OPF Jenkins</system>
+    <url>http://jenkins.opf-labs.org</url>
+  </ciManagement>
+  <distributionManagement>
+    <repository>
+      <id>OPF Artefactory</id>
+      <name>OPF Artefactory-releases</name>
+      <url>http://artifactory.opf-labs.org/artifactory/opf-dev-local</url>
+    </repository>
+  </distributionManagement>
+
+  <repositories>
+    <repository>
+      <snapshots>
+        <enabled>false</enabled>
+      </snapshots>
+      <id>opf-dev</id>
+      <name>OPF development</name>
+      <url>http://artifactory.opf-labs.org/artifactory/opf-dev</url>
+    </repository>
+  </repositories>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+    <mvn.compiler.version>3.3</mvn.compiler.version>
+    <mvn.resources.version>2.6</mvn.resources.version>
+    <mvn.jar.version>2.6</mvn.jar.version>
+    <mvn.javadoc.version>2.10</mvn.javadoc.version>
+    <mvn.source.version>2.4</mvn.source.version>
+    <java.source.version>1.7</java.source.version>
+    <java.target.version>1.7</java.target.version>
+    <jhove.timestamp>${maven.build.timestamp}</jhove.timestamp>
+    <maven.build.timestamp.format>yyyy-MM-dd HH:mm:ss</maven.build.timestamp.format>
+  </properties>
+
+  <build>
+    <pluginManagement>
+      <plugins>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-compiler-plugin</artifactId>
+          <version>${mvn.compiler.version}</version>
+          <configuration>
+            <source>${java.source.version}</source>
+            <target>${java.target.version}</target>
+          </configuration>
+        </plugin>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-jar-plugin</artifactId>
+          <version>${mvn.jar.version}</version>
+        </plugin>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-resources-plugin</artifactId>
+          <version>${mvn.resources.version}</version>
+        </plugin>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-source-plugin</artifactId>
+          <version>${mvn.source.version}</version>
+        </plugin>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-javadoc-plugin</artifactId>
+          <version>${mvn.javadoc.version}</version>
+        </plugin>
+        <!--This plugin's configuration is used to store Eclipse m2e settings only. It has no influence on the Maven build 
+          itself. -->
+        <plugin>
+          <groupId>org.eclipse.m2e</groupId>
+          <artifactId>lifecycle-mapping</artifactId>
+          <version>1.0.0</version>
+          <configuration>
+            <lifecycleMappingMetadata>
+              <pluginExecutions>
+                <pluginExecution>
+                  <pluginExecutionFilter>
+                    <groupId>org.codehaus.mojo</groupId>
+                    <artifactId>properties-maven-plugin</artifactId>
+                    <versionRange>[1.0-alpha-2,)</versionRange>
+                    <goals>
+                      <goal>
+                        set-system-properties
+                      </goal>
+                    </goals>
+                  </pluginExecutionFilter>
+                  <action>
+                    <ignore></ignore>
+                  </action>
+                </pluginExecution>
+                <pluginExecution>
+                  <pluginExecutionFilter>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-enforcer-plugin</artifactId>
+                    <versionRange>[1.0.0,)</versionRange>
+                    <goals>
+                      <goal>enforce</goal>
+                    </goals>
+                  </pluginExecutionFilter>
+                  <action>
+                    <ignore />
+                  </action>
+                </pluginExecution>
+                <pluginExecution>
+                  <pluginExecutionFilter>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-antrun-plugin</artifactId>
+                    <versionRange>[1.3,)</versionRange>
+                    <goals>
+                      <goal>run</goal>
+                    </goals>
+                  </pluginExecutionFilter>
+                  <action>
+                    <ignore></ignore>
+                  </action>
+                </pluginExecution>
+              </pluginExecutions>
+            </lifecycleMappingMetadata>
+          </configuration>
+        </plugin>
+      </plugins>
+    </pluginManagement>
+  </build>
+  
+
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+        <groupId>org.xmlunit</groupId>
+        <artifactId>xmlunit-core</artifactId>
+        <version>2.0.0-SNAPSHOT</version>
+      </dependency>
+      <dependency>
+        <groupId>commons-cli</groupId>
+        <artifactId>commons-cli</artifactId>
+        <version>1.2</version>
+      </dependency>
+      <dependency>
+        <groupId>commons-io</groupId>
+        <artifactId>commons-io</artifactId>
+        <version>2.4</version>
+      </dependency>
+      <dependency>
+        <groupId>junit</groupId>
+        <artifactId>junit</artifactId>
+        <version>4.8.1</version>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
+</project>
