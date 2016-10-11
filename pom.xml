@@ -42,7 +42,6 @@
 
   <modules>
     <module>bbt-core</module>
-    <module>bbt-jhove</module>
   </modules>
 
   <scm>
